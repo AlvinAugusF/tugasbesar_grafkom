@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mercedes Benz</title>
+    <style>
+      
+      @font-face {
+        font-family: myFont;
+        src: url(../assets/TTSupermolotNeue-Light.ttf);
+      }
+      body {
+        /* overflow-y: hidden; */
+        font-family: myFont;
+        overscroll-behavior-inline: contain;
+      }
+      .container {
+        width: 520%;
+        height: 100vh;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: table;
+        scroll-snap-type: both mandatory;
+        overscroll-behavior-inline: contain;
+        overflow-x: hidden;
+      }
+      .page {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        /* border: 1px solid white; */
+        scroll-snap-align: start;
+      }
+      #myVideo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* opacity: 0.1; */
+      }
+      .title {
+        position: absolute;
+        top: 70%;
+        color: white;
+        left: 5%;
+        font-size: 70px;
+        z-index: 1;
+      }
+      .subtitle {
+        position: absolute;
+        top: 83%;
+        color: white;
+        left: 5%;
+        font-size: 25px;
+        z-index: 1;
+      }
+      .exit {
+        position: fixed;
+        right: 5%;
+        top: 5%;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        z-index: 1;
+      }
+      .page-2 {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        display: table-cell;
+        /* border: 1px solid white; */
+      }
+      .page-3 {
+        position: relative;
+        width: 50vw;
+        height: 100vh;
+        background-color: black;
+        display: table-cell;
+        /* border: 1px solid white; */
+      }
+      .page-4 {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: table-cell;
+        /* border: 1px solid white; */
+      }
+      .page-5 {
+        position: relative;
+        width: 70vw;
+        height: 100vh;
+        background-color: white;
+        display: table-cell;
+        /* border: 1px solid white; */
+      }
+      .page-6 {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: table-cell;
+        /* border: 1px solid white; */
+      }
+      .button {
+background-color: #ffffff00;
+  color: white;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 20px;
+  border: 2px solid white;
+  position: absolute;
+  left: 43%;
+  bottom: 10%;
+}
+.button:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+    </style>
+  </head>
+  <body id="body">
+    <!-- <section class="scroll"> -->
+    <div class="container" data-0="transform:translateX(0%);" data-1000="transform:translateX(-520%)">
+
+      <div class="page">
+        <img
+          src="/assets/images/navlogo.png"
+          style="
+            position: fixed;
+            left: 5%;
+            top: 3%;
+            width: 50px;
+            height: 50px;
+          "
+        />
+        <a href="home-page.html" class="exit">Exit</a>
+        <h1 class="title">MERCEDES BENZ</h1>
+        <h1 class="subtitle">Mercedes AMG GT-R</h1>
+        <video
+          src="../assets/videos/opening.mp4"
+          autoplay
+          loop
+          muted
+          id="myVideo"
+        ></video>
+      </div>
+      <div class="page-2">
+        <h1 style="position: absolute; color: white; bottom: 30%; left: 3%; font-size: 50px;">Mercedes Benz</h1>
+        <h2 style="position: absolute; color: white; bottom: 25%; left: 3%; font-size: 30px;">AMG GT-R</h2>
+        <img src="../assets/images/amg/1090602.jpg" style="position: absolute; right: 10%; top: 3%; width: 40%; height: 45%;">
+        <img src="../assets/images/amg/1090603.jpg" style="position: absolute; right: 10%; bottom: 3%; width: 40%; height: 45%;">
+      </div>
+      <div class="page-3">
+        <h1 style="position: absolute; color: white; bottom: 40%; left: 10%; font-size: 20px;">The agile responses to all driver commands and the overall <br>
+          performance now deliver even more of that <br>
+          ncomparable feeling that our racing drivers experience on the track",<br>
+          says Tobias Moers, Chairman of the Management Board of <br>
+          Mercedes-AMG GmbH.</h1>
+      </div>
+      <div class="page-4">
+        <img
+          src="../assets/images/amg/1090603.jpg"
+          width="100%"
+          height="100%"
+          style="opacity: 0.5;"
+        />
+        <a class="button" href="car-model-color-silver.html">START EXPLORE</a>
+      </div>
+      <div class="page-5">
+        <h1 style="position: absolute; color: black; bottom: 30%; left: 5%; font-size: 50px;">Modern Features</h1>
+        <h2 style="position: absolute; color: black; bottom: 27%; left: 5%; font-size: 20px;">Innovative display buttons</h2> 
+        <h2 style="position: absolute; color: black; bottom: 24%; left: 5%; font-size: 20px;">New generation steering wheels</h2> 
+        <img src="../assets/images/pana.jpeg" style="position: absolute; right: 3%; top: 3%; width: 37%; height: 37%;">
+        <img src="../assets/images/pana 2.jpeg" style="position: absolute; right: 3%; bottom: 3%; width: 37%; height: 55%;">
+      </div>
+      <div class="page-6">
+        <img
+          src="../pages/3d-interior/pana.jpeg"
+          width="100%"
+          height="100%"
+          style="opacity: 0.5;"
+        />
+        <a class="button" href="../pages/3d-interior/index.html">START EXPLORE</a>
+      </div>
+    </div>
+  <!-- </section> -->
+    <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+    <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+	<script src="../script/scroll2.js"></script>
+  </body>
+</html>

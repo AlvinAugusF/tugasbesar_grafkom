@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orange Color</title>
+  </head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+  <style>
+
+@font-face {
+  font-family: myFont;
+  src: url(../assets/TTSupermolotNeue-Light.ttf);
+}
+
+    body {
+      /* background: radial-gradient(circle at center, #26687a , #102c34 100%);
+       */
+       background: black;
+      font-family: myFont;
+      font-size: 17px;
+      font-weight: 600;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+@keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0.2;
+            }
+        }
+    #myVideo {
+  position: fixed;
+  min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+  z-index: -1;
+  animation: fadeInAnimation ease 5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+  
+}
+    .page {
+      background: transparent;
+      min-width: 100vw;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      position: flex;
+    }
+    .show canvas{
+      width: 70%;
+      height: 80vh;
+      margin: 0 auto;
+      padding: 5px;
+      color: white;
+    }
+    .color {
+      width: 10%;
+      height: 30vh;
+      position: absolute;
+      right: 2.5%;
+      top: 10%;
+    }
+    .arrow-left {
+      position: absolute;
+      left: 5%;
+    }
+    .arrow-right {
+      position: absolute;
+      right: 5%;
+    }
+    button {
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      background-color: transparent;
+      display: inline-block;
+
+    }
+    button:hover{
+        border: 1px solid rgba(255,255,255,.5);
+    }
+    .color div{
+        height: 20%;
+        width: 100%;
+        border: 1px solid white;
+        color: white;
+    }
+    img{
+      position: fixed;
+      left: 2%;
+      top: 2%;
+    }
+    #mydiv > .btn-default {
+  background:transparent;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+            background-color:transparent;
+ }
+ .exit{
+        position: fixed;
+        right: 2%;
+        top: 2%;
+        font-size: 3vw;
+        color: white;
+        text-decoration: none;
+    }
+    .exit:hover{
+      color: white;
+    }
+    .loading{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 50%;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+
+
+    progress {
+      width: 50%;
+      margin-top: 0.5%;
+      height: 2%;
+  background: purple;
+  border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+  background: rgb(122, 24, 0);
+  border: 0.1px solid white;
+  border-radius: 20px;
+}
+
+progress::-webkit-progress-bar {
+  background: rgb(206, 206, 206);
+  border-radius: 20px;
+}
+  </style>
+  <body>
+    <div class="loading">
+      <label style="color: white; font-size: 1.5vw;">Loading model...</label>
+      <progress id="progress-bar" value="5" max="100"></progress>
+    </div>
+<!-- Navbar -->
+<a class="nav-item" href="home.html">
+  <img src="../assets/images/navlogo.png" width="40" height="40" class="d-inline-block align-top" alt="">
+</a>
+<nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong" style="height: 60px;">
+  <div class="mx-auto order-0">
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link link-light" href="#" id="popHood">Open Hood</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link link-light" href="#" id="leftDoor">Open Left Door</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link link-light" href="#" id="rightDoor">Open Right Door</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link link-light" href="#" id="allAnimation">Play All Animation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link link-light" href="#" id="stop">Stop Animation</a>
+      </li>
+      <div id="mydiv" class="dropdown transparentbar" style="z-index:4">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle link-light" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Colors
+        </a>
+        <ul class="dropdown-menu bg-transparent" aria-labelledby="navbarDropdownMenuLink" style="border: none;">
+          <li class="collapse navbar-collapse"><a class="dropdown-item link-light" href="car-model-color-silver.html"><button class="rounded-circle  me-md-3" style="width: 18px; height: 18px; background-color: gray;"></button> Silver </a></li>
+          <li class="collapse navbar-collapse"><a class="dropdown-item link-light" href="car-model-color-black.html"><button class="rounded-circle  me-md-3" style="width: 18px; height: 18px; background-color: black;"></button> Black </a></li>
+          <li class="collapse navbar-collapse"><a class="dropdown-item link-light " href="car-model-color-green.html"><button class="rounded-circle  me-md-3" style="width: 18px; height: 18px; background-color: green;"></button> Green </a></li>
+          <li class="collapse navbar-collapse"><a class="dropdown-item link-light disabled" href="car-model-color-orange.html"><button class="rounded-circle  me-md-3" style="width: 18px; height: 18px; background-color: orange;"></button> Orange </a></li>
+          <li class="collapse navbar-collapse"><a class="dropdown-item link-light " href="car-model-color-blue.html"><button class="rounded-circle  me-md-3" style="width: 18px; height: 18px; background-color: navy;"></button> Blue </a></li>
+        </ul>
+      </li>
+    </div>
+    </ul>
+  </div>
+</nav>
+<a href="home.html" class="exit">⤬</a>
+<!-- Navbar -->
+    <div class="page">
+      <video src="../assets/videos/home.webm" autoplay loop muted width="100%" height="100%" id="myVideo"></video>
+      <div class="show">
+        <canvas class="blue"></canvas>
+      </div>
+      <button id="left" class="arrow-left"><i class="bi bi-arrow-left"></i></button>
+      <button id="right" class="arrow-right"><i class="bi bi-arrow-right"></i></button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.146.0/three.min.js"></script>
+  <script src="https://unpkg.com/three@0.146.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://unpkg.com/three@0.146.0/examples/js/loaders/RGBELoader.js"></script>
+  <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+  <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+  <script src="../script/orange.js"></script>
+  </body>
+</html>

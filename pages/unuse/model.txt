@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes Benz</title>
+</head>
+<style>
+    @font-face {
+  font-family: myFont;
+  src: url(../assets/TTSupermolotNeue-Light.ttf);
+}
+    body{
+        /* overflow: hidden; */
+        font-family: myFont;
+        background-color: black;
+        overflow-x: hidden;
+    }
+    .page {
+      background: transparent;
+      min-width: 100vw;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      position: flex;
+    }
+    #myVideo {
+  position: fixed;
+  min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    opacity: 0.5;
+  z-index: -1;
+}
+.title{
+        position: absolute;
+        top :70%;
+        color: white;
+        left: 5%;
+        font-size: 70px;
+    }
+    .subtitle{
+        position: absolute;
+        top :83%;
+        color: white;
+        left: 5%;
+        font-size: 25px;
+    }
+    .exit{
+        position: fixed;
+        right: 5%;
+        top: 5%;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+    }
+    .interior-page{
+        min-width: 100vw;
+      height: 100vh;
+    }
+    .button {
+background-color: rgba(0, 0, 0, 0.32);
+  color: white;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 20px;
+  border: 1px solid white;
+  position: absolute;
+  left: 3%;
+  top: 185%;
+}
+.button:hover{
+    background-color: black;
+    color: white;
+}
+</style>
+<body>
+    <div class="page">
+        <img src="/assets/images/navlogo.png" style="position: absolute; left: 5%; top: 3%; width: 50px; height: 50px;">
+        <a href="home-page.html" class="exit">Exit</a>
+        <h1 class="title">MERCEDES BENZ</h1>
+            <h1 class="subtitle">Mercedes AMG GT-R</h1>
+        <video src="../assets/videos/home.webm" autoplay loop muted width="100%" height="100%" id="myVideo"></video>
+    </div>
+    <div class="interior-page">
+        <img src="../pages/3d-interior/pana.jpeg" width="100%" height="100%">
+        <a class="button" href="../pages/3d-interior/index.html">START EXPLORE</a>
+    </div>
+</body>
+</html>

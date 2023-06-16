@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mercedes Benz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @font-face {
+  font-family: myFont;
+  src: url(../assets/TTSupermolotNeue-Light.ttf);}
+        body {
+            font-family:myFont;
+            animation: fadeInAnimation ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        h5{
+            font-weight: bold;
+        }
+        .button {
+background-color: #ffffff;
+  border: none;
+  color: black;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+.button:hover{background-color: #f1f1f17d;} 
+.w3-row img {margin-bottom: -8px}
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large"><img src="../assets/images/navlogo.png" style="width: 25px;"></a>
+            <a href="#variants" class="w3-bar-item w3-button w3-padding-large w3-hide-small">AMG GT Series</a>
+            <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">More</a>
+            <a href="./opening-page.html" class="w3-padding-large w3-button  w3-hide-small w3-right">Exit</a>
+        </div>
+    </div>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+        <!-- Automatic Slideshow Images -->
+        <div class="mySlides w3-display-container w3-center">
+            <img src="../assets/images/amg/1.jpg" style="width:100%">
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                <h3>Mercedes Benz</h3>
+                <p><b>AMG GT-R</b></p>
+            </div>
+        </div>
+        <div class="mySlides w3-display-container w3-center">
+            <img src="../assets/images/amg/2.jpg" style="width:100%">
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                <h3>Mercedes Benz</h3>
+                <p><b>AMG GT-R</b></p>
+            </div>
+        </div>
+        <div class="mySlides w3-display-container w3-center">
+            <img src="../assets/images/amg/3.jpg" style="width:100%">
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                <h3>Mercedes Benz</h3>
+                <p><b>AMG GT-R</b></p>
+            </div>
+        </div>
+        <div class="mySlides w3-display-container w3-center">
+            <img src="../assets/images/amg/4.jpg" style="width:100%">
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                <h3>Mercedes Benz</h3>
+                <p><b>AMG GT-R</b></p>
+            </div>
+        </div>
+        <div class="mySlides w3-display-container w3-center">
+            <img src="../assets/images/amg/5.jpg" style="width:100%">
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                <h3>Mercedes Benz</h3>
+                <p><b>AMG GT-R</b></p>
+            </div>
+        </div>
+
+        <!-- The Band Section -->
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1700px" id="variants">
+            <h2 class="w3-wide">AMG GT Series</h2>
+            <p class="w3-opacity"><i>All Variants</i></p><br>
+            <div class="w3-row">
+                <div class="w3-half">
+                  <img src="../assets/images/amg-type/gtc50.jpg" style="width:100%" alt="GTC 50">
+                  <img src="../assets/images/amg-type/gtc.jpg" style="width:100%">
+                  <img src="../assets/images/amg-type/roadster.jpg" style="width:100%">
+                </div>
+            
+                <div class="w3-half">
+                  <img src="../assets/images/amg-type/gts.jpg" style="width:100%">
+                  <img src="../assets/images/amg-type/gtr.jpg" style="width:100%;">
+                  <img src="../assets/images/amg-type/gtc 50.jpg" style="width:100%;">
+                </div>
+              </div>
+            </div>
+            
+
+        </div>
+    </div>
+
+    <!-- The Tour Section -->
+    <div class="w3-black" id="tour">
+        <div class="w3-container w3-content w3-padding-64 w3-center" style="max-width:800px">
+            <h2 class="w3-wide w3-center">Ready For A New Experience?</h2>
+            <a class="button" href="./model.html">START EXPLORE</a>
+        </div>
+    </div>
+    <!-- End Page Content -->
+    </div>
+
+    <script>
+        // Automatic Slideshow - change image every 4 seconds
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 4000);
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

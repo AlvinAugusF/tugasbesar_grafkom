@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/style/home.css" />
+    <!-- <link rel="stylesheet" href="./css/main.css"> -->
+    <style>
+      @font-face {
+        font-family: myFont;
+        src: url(/assets/TTSupermolotNeue-Light.ttf);
+      }
+      body {
+        font-family: myFont;
+      }
+      canvas {
+        display: block;
+      }
+      img {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      img:hover {
+        opacity: 0.7;
+      }
+
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+      }
+
+      /* Modal Content (image) */
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+      }
+
+      /* Add Animation */
+      .modal-content,
+      #caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+
+      @-webkit-keyframes zoom {
+        from {
+          -webkit-transform: scale(0);
+        }
+        to {
+          -webkit-transform: scale(1);
+        }
+      }
+
+      @keyframes zoom {
+        from {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+
+      /* The Close Button */
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* 100% Image Width on Smaller Screens */
+      @media only screen and (max-width: 700px) {
+        .modal-content {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper d-flex flex-nowrap">
+      <section
+        class="section w-100 flex-shrink-0 vw-100 vh-100 d-flex justify-content-center align-items-center"
+      >
+        <div id="container">
+          <script src="script.js" type="module"></script>
+        </div>
+        <div style="position: absolute; top: 0%; left: 93%; color: white">
+          <a
+            href="/pages/home.html"
+            style="font-size: 1.5vw; text-decoration: none; color: white"
+            >Exit</a
+          >
+        </div>
+        <div style="position: absolute; top: 75%; left: 5%; color: white">
+          <p style="font-size: 3vw">Inside the Interior <br> VR view</p>
+          <p style="font-size: 1vw">
+            modern features, modern display, and new generation steering wheels
+          </p>
+        </div>
+        <div style="position: absolute; top: 90%; left: 90%; color: white">
+          <p style="font-size: 1vw">Scroll to explore</p>
+        </div>
+      </section>
+      <section
+        class="section section--dark w-50 vh-100 flex-shrink-0 d-flex justify-content-center align-items-center bg-white"
+      >
+        <div
+          style="
+            width: 100%;
+            height: 100%;
+            color: blak;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 10%;
+            top: 40%;
+          "
+        >
+          <p style="font-size: 5vw">INTERIOR DETAILS</p>
+          <p style="font-size: 1.5vw">MERCEDES BENZ AMG GT-R</p>
+        </div>
+      </section>
+      <section
+        class="section w-100 vh-100 flex-shrink-0 d-flex justify-content-center align-items-center bg-white"
+      >
+        <!-- <div
+          style="
+            position: absolute;
+            top: 10%;
+            left: 15%;
+            color: white;
+            background-color: black;
+            width: 3%;
+            height: 3%;
+            -ms-transform: rotate(-90deg); /* IE 9 */
+            transform: rotate(-90deg);
+            text-align: center;   
+          "
+        >
+          <p style="font-size: 1vw">steer</p>
+        </div> -->
+        <div
+          style="
+            position: absolute;
+            top: 35%;
+            left: 15%;
+            color: black;
+            width: 30%;
+          "
+        >
+          <p style="font-size: 3vw">Steer</p>
+          <p style="font-size: 1.5vw">It’s all down to the grip</p>
+          <p style="font-size: 1vw">
+            On the AMG GT S and AMG GT C the steering wheel comes as standard
+            with a rim in black nappa leather/DINAMICA microfibre. In the AMG GT
+            R the rim is completely covered with DINAMICA microfibre. The AMG
+            steering wheel also comes in black nappa leather with trim in black
+            piano gloss, as well as DINAMICA microfibre with elements in
+            high-gloss carbon fibre.
+          </p>
+        </div>
+        <img
+          id="myImg"
+          src="/assets/images/details/steer.jpeg"
+          style="
+            position: absolute;
+            left: 65%;
+            top: 0%;
+            width: 35%;
+            height: 100%;
+            /* border-radius: 20px; */
+          "
+        />
+      </section>
+      <section
+        class="section w-100 vh-100 flex-shrink-0 d-flex justify-content-center align-items-center bg-white"
+      >
+        <div
+          style="
+            position: absolute;
+            top: 35%;
+            left: 15%;
+            color: black;
+            width: 30%;
+          "
+        >
+          <p style="font-size: 3vw">Display</p>
+          <p style="font-size: 1.5vw">Display Data Logger AMG</p>
+          <p style="font-size: 1vw">
+            The AMG TRACK PACE virtual race engineer, which records data when
+            driving on closed-off race tracks, provides a significantly extended
+            and even more precise scope of functions. AMG TRACK PACE is a
+            standard part of the COMAND online infotainment system.Once the
+            function has been activated, while driving on a race track, more
+            than 80 vehicle-specific sets of data (e.g. speed, acceleration) are
+            recorded ten times per second. On top of this, lap and sector times
+            are displayed, as well as the respective difference to a reference
+            time.
+          </p>
+        </div>
+        <img
+          id="myImg"
+          src="/assets/images/details/display.jpeg"
+          style="
+            position: absolute;
+            left: 65%;
+            top: 0%;
+            width: 35%;
+            height: 100%;
+            /* border-radius: 20px; */
+          "
+        />
+      </section>
+      <section
+        class="section w-100 vh-100 flex-shrink-0 d-flex justify-content-center align-items-center bg-black"
+      >
+        <div
+          style="
+            position: absolute;
+            top: 35%;
+            left: 15%;
+            color: white;
+            width: 30%;
+          "
+        >
+          <p style="font-size: 3vw">Light</p>
+          <p style="font-size: 1.5vw">AMG GT Further Echanced</p>
+          <p style="font-size: 1vw">
+            The new light controls of the LED high performance headlights now
+            show parallels to the AMG GT 4-door coupé and therefore further
+            enhance the AMG GT family connection. A tri-functional, arched light
+            guide takes on the functions of daytime running light, navigation
+            light and turn signals.
+          </p>
+        </div>
+        <img
+          id="myImg"
+          src="/assets/images/details/led.jpg"
+          style="
+            position: absolute;
+            left: 65%;
+            top: 0%;
+            width: 35%;
+            height: 100%;
+            /* border-radius: 20px; */
+          "
+        />
+      </section>
+      <section
+        class="section w-100 vh-100 flex-shrink-0 d-flex justify-content-center align-items-center bg-black"
+      >
+        <div
+          style="
+            position: absolute;
+            top: 35%;
+            left: 15%;
+            color: white;
+            width: 30%;
+          "
+        >
+          <p style="font-size: 3vw">Wheels</p>
+          <p style="font-size: 1.5vw">Double Spoked Forged</p>
+          <p style="font-size: 1vw">
+            The AMG GT and AMG GT S can come with a new light y-spoke alloy
+            wheel in soft black with a finely polished surface. In addition, an
+            option for the AMG GT, AMG GT S and AMG GT C is new 10-double-spoked
+            forged wheels in titanium grey with finely polished surfaces or in
+            soft black with finely polished rim flange.
+          </p>
+        </div>
+        <img
+          id="myImg"
+          src="/assets/images/details/wheel.jpg"
+          style="
+            position: absolute;
+            left: 65%;
+            top: 0%;
+            width: 35%;
+            height: 100%;
+            /* border-radius: 20px; */
+          "
+        />
+      </section>
+      <section
+        class="section w-100 vh-100 flex-shrink-0 d-flex justify-content-center align-items-center"
+        style="background-color: rgb(218, 218, 218)"
+      >
+        <div
+          style="
+            position: absolute;
+            top: 35%;
+            left: 15%;
+            color: black;
+            width: 30%;
+          "
+        >
+          <p style="font-size: 3vw">Engine</p>
+          <p style="font-size: 1.5vw">Code : M 178 DE 40 AL</p>
+          <p style="font-size: 1vw">
+            The GT uses a front mid-engine, rear-wheel-drive layout, with the
+            engine positioned inside of the vehicle's wheelbase. The spaceframe
+            chassis and body are made out of aluminium alloys, while the trunk
+            lid is made of steel and the hood is made of magnesium.The
+            suspension system is a double wishbone unit at the front and rear,
+            with forged aluminium wishbones and hub carriers.
+          </p>
+        </div>
+        <img
+          id="myImg"
+          src="/assets/images/details/8.jpeg"
+          style="
+            position: absolute;
+            left: 65%;
+            top: 0%;
+            width: 35%;
+            height: 100%;
+            /* border-radius: 20px; */
+          "
+        />
+      </section>
+      <section
+        class="section w-75 flex-shrink-0 vw-100 vh-100 d-flex justify-content-center align-items-center bg-black"
+      >
+        <img
+          src="/assets/images/amg/1090603.jpg"
+          style="
+            opacity: 0.5;
+            z-index: -1;
+            object-fit: fill;
+            width: 100%;
+            height: 100%;
+          "
+        />
+        <div style="position: absolute; top: 45%; left: 5%; color: white">
+          <p style="font-size: 3vw">Play with model</p>
+          <p style="font-size: 1.5vw">animations and colors</p>
+        </div>
+        <div class="position-absolute bottom-0 start-50 translate-middle-x">
+          <button type="button" class="btn btn-dark btn-lg">
+            <a
+              class="link-light link-offset-2 link-underline link-underline-opacity-0"
+              href="/pages/car-model-color-silver.html"
+            >
+              Start Explore
+            </a>
+          </button>
+        </div>
+      </section>
+    </div>
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img
+        id="modal-img"
+        class="modal-content"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQS2ol73JZj6-IqypxPZXYS3rRiPwKteoD8vezk9QsRdkjt3jEn&usqp=CAU"
+      />
+    </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      var modalImg = document.getElementById("modal-img");
+      var captionText = document.getElementById("caption");
+
+      document.addEventListener("click", (e) => {
+        const elem = e.target;
+        if (elem.id === "myImg") {
+          modal.style.display = "block";
+          modalImg.src = elem.dataset.biggerSrc || elem.src;
+          captionText.innerHTML = elem.alt;
+        }
+      });
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.146.0/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.146.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://unpkg.com/three@0.146.0/examples/js/loaders/RGBELoader.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="/script/scroll2.js" type="module"></script>
+  </body>
+</html>

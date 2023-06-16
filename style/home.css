@@ -1,0 +1,14 @@
+
+body {
+    overflow-x: hidden;
+  }
+  
+  .section {
+    font-size: 5rem;
+    border: none;
+  }
+  section {
+    font-weight: 900;
+    transition: color 0.3s;
+    border: none;
+  }

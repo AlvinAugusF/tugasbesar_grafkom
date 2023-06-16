@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+  @font-face {
+  font-family: myFont;
+  src: url(../assets/TTSupermolotNeue-Light.ttf);}
+body,h1 {font-family: myFont}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('../assets/images/opening.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.button {
+background-color: #ffffff00;
+  color: white;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 20px;
+  border: 2px solid white;
+  position: absolute;
+  left: 45%;
+  bottom: 5%;
+  animation: fadeInAnimation ease 5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+}
+
+
+
+@keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        .button:hover{background-color: #f1f1f17d;} 
+</style>
+</head>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    <h1 class="w3-jumbo w3-animate-top">Mercedes Benz</h1>
+    <h2 class="w3-animate-top">AMG GT Series</h2>
+  </div>
+  <a class="button" href="./home-page.html">START EXPLORE</a>
+</div>
+
+
+</body>
+</html>

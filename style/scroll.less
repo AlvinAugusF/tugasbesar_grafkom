@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Poppins';
+    color: white;
+}
+.wrapper {
+    overflow-x: hidden;
+    position: relative;
+    height: 600%;
+}
+* {
+    box-sizing: border-box;
+}
+
+svg {
+    position: absolute;
+    top: 12em;
+    left: 10vw;
+    width: 50vw;
+
+    .mask {
+        width: 0;
+    }
+}
+
+.container {
+    display: flex;
+    width: 600%;
+    overscroll-behavior: none;
+    .col {
+        display: flex;
+        gap: 3em;
+        
+        p {
+            font-size: .8rem;
+        }
+    }
+
+    section {
+        width: 100vw;
+        padding: 20vw 10vw;
+        // border: 1px solid black;
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+            width: 50vw;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            gap: 3em;
+            width: 100%;
+            height: 300px;
+            padding: 0;
+
+            li {
+                background: white;
+                border-radius: .3em;
+                flex-grow: 1;
+            }
+        }
+
+    }
+}
+
+section {
+    height: 200vh;
+
+}
+
+img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    object-fit: cover;
+    width: 170vh;
+    height: 100vh;
+    overflow-x: hidden;
+}
+video {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    /* opacity: 0.1; */
+  }
